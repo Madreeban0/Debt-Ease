@@ -1,0 +1,28 @@
+{
+  "name": "s76_reeban_capstone_debtease",
+  "version": "1.0.0",
+  "description": "Project Title: DebtEase\r \"Take Control. Build Credit. Secure Your Future.\"\r Overview:\r DebtEase is a smart Debt Management App designed to help individuals improve their CIBIL score by efficiently tracking and managing their financial obligations. Managing debts effectively is crucial for financial stability, yet many people struggle with missed payments, high interest rates, and bounced checks.\r With DebtEase, users can upload their total debt details, track repayments, receive alerts for bounced checks, and ensure that their financial records remain consistent with official documents. Our mission is to empower users with financial discipline and help them achieve a better credit score effortlessly.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.13.3",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

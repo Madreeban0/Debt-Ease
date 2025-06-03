@@ -1,0 +1,21 @@
+meta {
+  name: Post
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://localhost:5000/api/debts
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "userId": "663c1636e78eabc9e8f41b82",
+    "amount": 5000,
+    "interestRate": 5.5,
+    "dueDate": "2025-07-01"
+  }
+  
+}
