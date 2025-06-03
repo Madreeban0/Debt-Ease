@@ -3,7 +3,7 @@ require('dotenv').config();
 const cors = require('cors');
 const session = require('express-session');
 const passport = require('passport');
-
+const checkBookRoutes = require('./routes/checkBookroutes');
 const connectdb = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const googleRoutes = require('./routes/googleRoutes');
@@ -36,6 +36,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/auth', googleRoutes);
 app.use('/api/debts', debtRoutes);
 app.use('/api/repayments', repaymentRoutes);
+app.use('/api/checksbooks', checkBookRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).json({ message: "DebtEase API is running ✅" });
