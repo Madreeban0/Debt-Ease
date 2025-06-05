@@ -9,16 +9,18 @@ const authRoutes = require('./routes/authRoutes');
 const googleRoutes = require('./routes/googleRoutes');
 const debtRoutes = require('./routes/debtRoutes');
 const repaymentRoutes = require('./routes/repaymentRoutes');
+const emiRoutes = require('./routes/emiRoutes');
+const reportRoutes = require('./routes/reportRoutes');
 
-// Load Passport config
+
 require('./config/passport')(passport);
 
-// Connect to DB
+
 connectdb();
 
 const app = express();
 
-// Middlewares
+
 app.use(cors());
 app.use(express.json());
 
@@ -31,12 +33,14 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Routes
+
 app.use('/api/auth', authRoutes);
 app.use('/api/auth', googleRoutes);
 app.use('/api/debts', debtRoutes);
 app.use('/api/repayments', repaymentRoutes);
 app.use('/api/checksbooks', checkBookRoutes);
+app.use('/api', emiRoutes);
+app.use('/api/reports', reportRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).json({ message: "DebtEase API is running ✅" });
