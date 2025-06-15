@@ -11,7 +11,7 @@ const debtRoutes = require('./routes/debtRoutes');
 const repaymentRoutes = require('./routes/repaymentRoutes');
 const emiRoutes = require('./routes/emiRoutes');
 const reportRoutes = require('./routes/reportRoutes');
-
+const profileRoutes = require('./routes/profileRoutes');
 
 require('./config/passport')(passport);
 
@@ -41,6 +41,7 @@ app.use('/api/repayments', repaymentRoutes);
 app.use('/api/checksbooks', checkBookRoutes);
 app.use('/api', emiRoutes);
 app.use('/api/reports', reportRoutes);
+app.use('/api/profile',profileRoutes);
 
 app.get('/', (req, res) => {
   res.status(200).json({ message: "DebtEase API is running ✅" });
